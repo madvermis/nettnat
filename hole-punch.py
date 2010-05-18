@@ -109,6 +109,9 @@ class Endpoint(object):
 if __name__ == "__main__":
   SERVER_IP = '192.43.193.103'
   SERVER_PORT = 60000
+  if len(sys.argv)<3:
+    print "------------------\nUsage: python hole-punch.py your-name target-name\n"
+    exit(0)
   name = sys.argv[1]
   connect_name = sys.argv[2]
   pt = Endpoint(name)
